@@ -59,9 +59,18 @@ main{
 }
 
 .quadrato{
-    width: calc(700px / 10 - 20px);
-    height: calc(700px / 10 - 20px);
+    width: calc(700px / 10 );
+    height: calc(700px / 10 );
     border: 1px solid black;
+    cursor: pointer;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadrato.clicked{
+    background-color: aqua;
 }
 
 footer{
