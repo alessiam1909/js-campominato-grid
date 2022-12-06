@@ -21,13 +21,14 @@ bottone.addEventListener('click', function(){
     for (let i = 0; i < 100; i++){
            
         const quadratoDinamico = creaQuadrato(i);
+        
+        grid.appendChild(quadratoDinamico);
 
         quadratoDinamico.addEventListener('click', function(){
             this.classList.add('clicked');
             console.log(this.textContent);
         })
                 
-        grid.appendChild(quadratoDinamico);
 
 
     
