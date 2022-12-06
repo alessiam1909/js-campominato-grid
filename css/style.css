@@ -45,8 +45,23 @@ main{
 .container-griglia{
     width: 80%;
     height: 100%;
-    padding: 30px 0;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.griglia{
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quadrato{
+    width: calc(700px / 10 - 20px);
+    height: calc(700px / 10 - 20px);
+    border: 1px solid black;
 }
 
 footer{
