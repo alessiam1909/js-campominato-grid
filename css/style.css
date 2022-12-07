@@ -29,22 +29,26 @@ h1{
     font-weight: 800;
 }
 
-#bottone-play{
+#bottone-play, select{
     width: 100px;
     padding: 5px;
     font-size: 17px;
     font-weight: 800;
+    margin-left: 20px;
 }
 
 main{
     width: 100vw;
     height: 85vh;
     background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-griglia{
-    width: 80%;
-    height: 100%;
+    width: 700px;
+    height: 700px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -52,15 +56,12 @@ main{
 }
 
 .griglia{
-    width: 700px;
-    height: 700px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .quadrato{
-    width: calc(700px / 10 );
-    height: calc(700px / 10 );
+    
     border: 1px solid black;
     cursor: pointer;
     font-weight: 800;
