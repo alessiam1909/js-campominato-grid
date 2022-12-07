@@ -29,10 +29,7 @@ function createNewGame(){
     generateGameGrid(cellsNumber, cellsPerRow);
 }
 
-
 function generateGameGrid(cellsNumber, cellsPerRow){
-    
-    document.querySelector('.container-griglia').inneHTML = '';
     
     const grid = document.createElement('div');
     grid.classList.add('griglia');
@@ -41,9 +38,12 @@ function generateGameGrid(cellsNumber, cellsPerRow){
     
     grid.style.width = `${grid_side}px`
     grid.style.height = `${grid_side}px`
-
+    
+    document.querySelector('.container-griglia').inneHTML = '';
+    console.log(document.querySelector('.container-griglia').inneHTML);
+    
     for (let i=0; i <cellsNumber; i++){
-        const cell = createSingleCell(i + 1, cellsPerRow);
+        const cell = createSingleCell(i, cellsPerRow);
         cell.addEventListener('click', function(){
             this.classList.toggle('clicked')
             console.log(this.innerText)
@@ -54,7 +54,6 @@ function generateGameGrid(cellsNumber, cellsPerRow){
     
     document.querySelector('.container-griglia').appendChild(grid)
 }
-
 
 function createSingleCell(num, cells_per_row){
     const cell = document.createElement('div');
@@ -72,8 +71,7 @@ function createSingleCell(num, cells_per_row){
 
 document.getElementById('bottone-play').addEventListener('click', function(){
     createNewGame();
-
-    
+  
 })
 
 
